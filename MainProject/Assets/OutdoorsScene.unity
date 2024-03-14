@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 2161.384, g: 2265.385, b: 3288.567, a: 1}
+  m_IndirectSpecularColor: {r: 2159.7473, g: 2263.6213, b: 3286.6099, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -133,6 +133,7 @@ GameObject:
   m_Component:
   - component: {fileID: 147216694}
   - component: {fileID: 147216693}
+  - component: {fileID: 147216695}
   m_Layer: 0
   m_Name: Third Person Cammera
   m_TagString: Untagged
@@ -270,6 +271,36 @@ Transform:
   - {fileID: 2102181102}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &147216695
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 147216692}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e501d18bb52cf8c40b1853ca4904654f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_CollideAgainst:
+    serializedVersion: 2
+    m_Bits: 1
+  m_IgnoreTag: Player
+  m_TransparentLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_MinimumDistanceFromTarget: 0.1
+  m_AvoidObstacles: 1
+  m_DistanceLimit: 0
+  m_MinimumOcclusionTime: 0
+  m_CameraRadius: 0.1
+  m_Strategy: 0
+  m_MaximumEffort: 4
+  m_SmoothingTime: 0
+  m_Damping: 0.6
+  m_DampingWhenOccluded: 0.6
+  m_OptimalTargetDistance: 0
 --- !u!1 &157207112
 GameObject:
   m_ObjectHideFlags: 0
@@ -614,7 +645,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 623365354}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.08722765, y: -0.000000016240326, z: 0.0000000014220258, w: 0.9961884}
+  m_LocalRotation: {x: 0.08722767, y: 0.000000020712672, z: -0.000000001813631, w: 0.9961884}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -865,7 +896,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1450206760}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.06909307, y: 0.000000017165263, z: -0.000000001188842, w: 0.9976102}
+  m_LocalRotation: {x: 0.06909307, y: -0.00000001716526, z: 0.0000000011888417, w: 0.9976102}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -893,6 +924,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   controller: {fileID: 683351987}
   speed: 6
+  turnSmoothTime: 0.1
 --- !u!1 &1697765329
 GameObject:
   m_ObjectHideFlags: 3
@@ -1234,7 +1266,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1823688464}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.0654728, y: 0.00000002661267, z: -0.0000000017461526, w: 0.99785435}
+  m_LocalRotation: {x: 0.0654728, y: -0.00000002832961, z: 0.0000000018588074, w: 0.99785435}
   m_LocalPosition: {x: 0, y: 4.411296, z: -17.573486}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -1550,6 +1582,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Third Person Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 2088727103666443991, guid: 034ceaf668efc404a8655c6a43fd96dd,
+        type: 3}
+      propertyPath: m_TagString
+      value: Player
       objectReference: {fileID: 0}
     - target: {fileID: 5071114622738768324, guid: 034ceaf668efc404a8655c6a43fd96dd,
         type: 3}
