@@ -1814,6 +1814,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
+<<<<<<< HEAD
   - {fileID: 8375203907008875045}
   - {fileID: 72611245775814459}
   - {fileID: 438888928771076986}
@@ -1858,6 +1859,12 @@ Transform:
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &4201239450156649579
+=======
+  - {fileID: 5304469724099355256}
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &6388200026203404016
+>>>>>>> TestFOrMain
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1865,23 +1872,34 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
+<<<<<<< HEAD
   - component: {fileID: 7773170581490211514}
   - component: {fileID: 7803697316958983723}
   - component: {fileID: 2703062681379636079}
   - component: {fileID: 9193850907123952743}
   m_Layer: 0
   m_Name: Cube (31)
+=======
+  - component: {fileID: 5304469724099355256}
+  m_Layer: 0
+  m_Name: Building
+>>>>>>> TestFOrMain
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+<<<<<<< HEAD
 --- !u!4 &7773170581490211514
+=======
+--- !u!4 &5304469724099355256
+>>>>>>> TestFOrMain
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< HEAD
   m_GameObject: {fileID: 4201239450156649579}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
@@ -4093,10 +4111,18 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 10, y: 1, z: 10}
+=======
+  m_GameObject: {fileID: 6388200026203404016}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+>>>>>>> TestFOrMain
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2808473704001211704}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+<<<<<<< HEAD
 --- !u!33 &7744298097319616851
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -4380,3 +4406,5 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+=======
+>>>>>>> TestFOrMain
