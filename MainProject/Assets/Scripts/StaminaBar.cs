@@ -8,9 +8,11 @@ public class StaminaBar : MonoBehaviour
     // Start is called before the first frame update
     public Slider staminaBar;
 
+    // Stamina Value
     private float maxStamina = 100f;
     private float currentStamina;
 
+    // For regen
     private WaitForSeconds regenTick = new WaitForSeconds(0.1f);
     private Coroutine regen;
 
@@ -18,14 +20,16 @@ public class StaminaBar : MonoBehaviour
 
     private void Awake()
     {
+        // start on awake
         instance = this;
     }
 
     void Start()
     {
-        currentStamina = maxStamina;
-        staminaBar.maxValue = maxStamina;
-        staminaBar.value = maxStamina;   
+        
+        currentStamina = maxStamina; // declares what the new current health is
+        staminaBar.maxValue = maxStamina;   // reference to the slider declaring it as health
+        staminaBar.value = maxStamina;   // this declares what the value of the current health
     }
 
     public void UseStamina(float amount)
