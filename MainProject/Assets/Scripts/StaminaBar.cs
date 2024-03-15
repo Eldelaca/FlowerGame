@@ -55,6 +55,7 @@ public class StaminaBar : MonoBehaviour
 
     private IEnumerator RegenStamina()
     {
+        // Stamina regen Timer
         yield return new WaitForSeconds(2);
 
         while(currentStamina < maxStamina)

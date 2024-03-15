@@ -19,12 +19,14 @@ public class Dashing : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        // Input
         if (Input.GetKeyDown(KeyCode.Space))
         {
             StartCoroutine(Dash());
         }
     }
-
+    
+    // Dashing
     IEnumerator Dash()
     {
         float startTime = Time.time;

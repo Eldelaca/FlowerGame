@@ -6,6 +6,7 @@ public class player : MonoBehaviour
 {
     void Update()
     {
+        // Inputs
         if(Input.GetKey(KeyCode.LeftShift))
             StaminaBar.instance.UseStamina(0.1f);
 
