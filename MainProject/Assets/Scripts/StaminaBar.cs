@@ -45,6 +45,8 @@ public class StaminaBar : MonoBehaviour
 
 
             regen = StartCoroutine(RegenStamina());
+            
+            
         }
         else
         {
