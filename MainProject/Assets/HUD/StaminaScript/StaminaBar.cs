@@ -30,6 +30,7 @@ public class StaminaBar : MonoBehaviour
 
     public void UseStamina(float amount)
     {
+        // stamina regen
         if(currentStamina - amount >= 0)
         {
             currentStamina -= amount;
