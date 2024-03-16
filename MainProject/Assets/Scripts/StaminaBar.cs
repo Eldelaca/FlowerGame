@@ -5,18 +5,25 @@ using UnityEngine.UI;
 
 public class StaminaBar : MonoBehaviour
 {
-    // Start is called before the first frame update
+    //Reference to ThirdPersonMovement script
+    private ThirdPersonMovement moveScript;
+
+    // For Dash
+    public float dashStaminaCost, dashSpeed, dashTime;
+    
     public Slider staminaBar;
 
     // Stamina Value
     private float maxStamina = 100f;
     private float currentStamina;
-
+    
+    
     // For regen
     private WaitForSeconds regenTick = new WaitForSeconds(0.1f);
     private Coroutine regen;
 
     public static StaminaBar instance;
+    
 
     private void Awake()
     {
@@ -27,13 +34,30 @@ public class StaminaBar : MonoBehaviour
     void Start()
     {
         
+        moveScript = GetComponent<ThirdPersonMovement>();
+        
         currentStamina = maxStamina; // declares what the new current health is
         staminaBar.maxValue = maxStamina;   // reference to the slider declaring it as health
         staminaBar.value = maxStamina;   // this declares what the value of the current health
     }
+    
+    void Update()
+    {
+        // Dash Input
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            StartCoroutine(Dash());
+        }
+    }
 
     public void UseStamina(float amount)
     {
+        // Dash Input
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            StartCoroutine(Dash());
+        }
+        
         // stamina regen
         if(currentStamina - amount >= 0)
         {
@@ -48,12 +72,33 @@ public class StaminaBar : MonoBehaviour
             
             
         }
-        else
-        {
-            Debug.Log("Not enough stamina");
-        }
+        
 
     }
+
+    // Dashing code
+    IEnumerator Dash()
+    {
+        if (currentStamina - dashStaminaCost >= 0) // Determine if value is above 0 player can dash
+        {
+            float startTime = Time.time;
+
+            while (Time.time < startTime + dashTime)
+            {
+                moveScript.controller.Move(moveScript.moveDir * dashSpeed * Time.deltaTime);
+
+                yield return null;
+            }
+
+            // Deduct stamina after dashing
+            UseStamina(dashStaminaCost);
+        }
+        else
+        {
+            Debug.Log("Not enough stamina to dash!");
+        }
+    }
+
 
     private IEnumerator RegenStamina()
     {
