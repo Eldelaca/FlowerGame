@@ -51,7 +51,8 @@ MonoBehaviour:
   projectileSpeed: 0
   projectileImpactRadius: 0
   projectileLifetime: 0
-  explosionVisuals: {fileID: 9121041717694396345, guid: c6889b69b51efe74288d1c85801420bd, type: 3}
+  explosionVisuals: {fileID: 9121041717694396345, guid: c6889b69b51efe74288d1c85801420bd,
+    type: 3}
 --- !u!33 &7626031995814572361
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -80,7 +81,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 7dd1f7f4747b0ad48b077edfbbefd156, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
