@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 2157.714, g: 2262.2952, b: 3285.891, a: 1}
+  m_IndirectSpecularColor: {r: 2159.801, g: 2265.7346, b: 3294.4458, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -940,7 +940,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1450206760}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.069093056, y: -0.0000000042913157, z: 2.9721042e-10, w: 0.9976102}
+  m_LocalRotation: {x: 0.069093056, y: 0.000000004291315, z: -2.9721037e-10, w: 0.9976102}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -1289,7 +1289,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1823688464}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.06547278, y: -9.046415e-10, z: 5.935676e-11, w: 0.99785435}
+  m_LocalRotation: {x: 0.06547278, y: 0.000000012830929, z: -8.41883e-10, w: 0.99785435}
   m_LocalPosition: {x: 0, y: 12.931295, z: -36.613487}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -1664,17 +1664,17 @@ PrefabInstance:
     - target: {fileID: 2480303407595344855, guid: 034ceaf668efc404a8655c6a43fd96dd,
         type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0.08722765
+      value: 0.08722763
       objectReference: {fileID: 0}
     - target: {fileID: 2480303407595344855, guid: 034ceaf668efc404a8655c6a43fd96dd,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.000000015247485
+      value: -0.00000002128006
       objectReference: {fileID: 0}
     - target: {fileID: 2480303407595344855, guid: 034ceaf668efc404a8655c6a43fd96dd,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0.0000000013350911
+      value: 0.0000000018633113
       objectReference: {fileID: 0}
     - target: {fileID: 4021940931365524097, guid: 034ceaf668efc404a8655c6a43fd96dd,
         type: 3}
@@ -2049,9 +2049,9 @@ SceneRoots:
   - {fileID: 1823688467}
   - {fileID: 157207114}
   - {fileID: 432432461}
+  - {fileID: 4526099089383080386}
   - {fileID: 2013410475}
   - {fileID: 9182895779334423553}
   - {fileID: 2046042776319925716}
   - {fileID: 5066285781658891648}
   - {fileID: 147216694}
-  - {fileID: 4526099089383080386}
