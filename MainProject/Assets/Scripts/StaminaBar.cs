@@ -5,13 +5,14 @@ using UnityEngine.UI;
 
 public class StaminaBar : MonoBehaviour
 {
-    //Reference to ThirdPersonMovement script
+    // References
     private ThirdPersonMovement moveScript;
-
+    public Slider staminaBar;
+    
     // For Dash
     public float dashStaminaCost, dashSpeed, dashTime;
     
-    public Slider staminaBar;
+
 
     // Stamina Value
     private float maxStamina = 100f;
@@ -40,8 +41,9 @@ public class StaminaBar : MonoBehaviour
         staminaBar.maxValue = maxStamina;   // reference to the slider declaring it as health
         staminaBar.value = maxStamina;   // this declares what the value of the current health
     }
-    
+
     void Update()
+
     {
         // Dash Input
         if (Input.GetKeyDown(KeyCode.Space))
@@ -52,11 +54,7 @@ public class StaminaBar : MonoBehaviour
 
     public void UseStamina(float amount)
     {
-        // Dash Input
-        if (Input.GetKeyDown(KeyCode.Space))
-        {
-            StartCoroutine(Dash());
-        }
+
         
         // stamina regen
         if(currentStamina - amount >= 0)
