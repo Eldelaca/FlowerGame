@@ -9,7 +9,7 @@ public class StaminaBar : MonoBehaviour
     private ThirdPersonMovement moveScript;
 
     // For Dash
-    public float dashStaminaCost, dashSpeed, dashTime;
+    public float dashStaminaCost = 25, dashSpeed = 50, dashTime = 0.1f;
     
     public Slider staminaBar;
 
