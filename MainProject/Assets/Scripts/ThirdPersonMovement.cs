@@ -13,14 +13,14 @@ public class ThirdPersonMovement : MonoBehaviour
     public float turnSmoothTime = 0.1f;
     float turnSmoothVelocity;
 
-    // Gravity
+    // Gravity and Jump
     public float gravity = -9.81f;
     public float jumpHeight = 3f;
 
     // Ground Check
-    public Transform groundCheck; // Transform position to check ground
-    public float groundDistance = 0.2f; // Distance for ground check
-    public LayerMask groundLayer; // Layer mask to define what is considered ground
+    public Transform groundCheck;
+    public float groundDistance = 0.2f;
+    public LayerMask groundLayer;
     private bool isGrounded;
 
     // Dash & Movement
@@ -41,16 +41,17 @@ public class ThirdPersonMovement : MonoBehaviour
         // Ground Check
         isGrounded = Physics.CheckSphere(groundCheck.position, groundDistance, groundLayer);
 
+        // If grounded, reset the vertical velocity
         if (isGrounded && velocity.y < 0)
         {
-            velocity.y = -2f; // Keeps player grounded
+            velocity.y = -2f; // Helps keep the player on the ground
         }
 
         // Movement
-        float ad = Input.GetAxisRaw("Horizontal");
-        float ws = Input.GetAxisRaw("Vertical");
+        float horizontal = Input.GetAxisRaw("Horizontal");
+        float vertical = Input.GetAxisRaw("Vertical");
 
-        Vector3 dir = new Vector3(ad, 0, ws).normalized;
+        Vector3 dir = new Vector3(horizontal, 0, vertical).normalized;
 
         if (dir.magnitude >= 0.1f)
         {
@@ -60,6 +61,13 @@ public class ThirdPersonMovement : MonoBehaviour
 
             moveDir = Quaternion.Euler(0, targetAngle, 0) * Vector3.forward;
             controller.Move(moveDir.normalized * speed * Time.deltaTime);
+        }
+
+        // Jumping
+        if (isGrounded && Input.GetKeyDown(KeyCode.Space))
+        {
+            float jumpVelocity = Mathf.Sqrt(jumpHeight * -2f * gravity);
+            velocity.y = jumpVelocity;
         }
 
         // Apply gravity

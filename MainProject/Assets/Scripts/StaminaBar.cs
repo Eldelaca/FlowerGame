@@ -46,7 +46,7 @@ public class StaminaBar : MonoBehaviour
 
     {
         // Dash Input
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (Input.GetKeyDown(KeyCode.LeftShift))
         {
             StartCoroutine(Dash());
         }
