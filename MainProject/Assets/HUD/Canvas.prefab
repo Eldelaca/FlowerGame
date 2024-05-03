@@ -103,6 +103,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   staminaBar: {fileID: 8303340372237010118}
+  dashStaminaCost: 0
+  dashSpeed: 0
+  dashTime: 0
 --- !u!1 &6139820234919494199
 GameObject:
   m_ObjectHideFlags: 0
